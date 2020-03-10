@@ -6,9 +6,9 @@ namespace CSharpDesignPatternsPractice.Singleton
     {
         static void Main()
         {
-            Logger ob1 = Logger.GetInstance();
+            Logger ob1 = Logger.Instance;
             
-            Logger ob2 = Logger.GetInstance();
+            Logger ob2 = Logger.Instance;
 
 
             //Same hashcode
