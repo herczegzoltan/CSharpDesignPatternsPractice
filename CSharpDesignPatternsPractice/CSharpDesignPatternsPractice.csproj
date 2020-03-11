@@ -48,10 +48,9 @@
     <Compile Include="Factory\Divide.cs" />
     <Compile Include="Factory\ICalculate.cs" />
     <Compile Include="Factory\Subtract.cs" />
-    <Compile Include="Factory\Test.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\Logger.cs" />
-    <Compile Include="Singleton\TestLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
