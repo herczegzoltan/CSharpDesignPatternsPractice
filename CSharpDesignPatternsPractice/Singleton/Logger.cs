@@ -10,13 +10,9 @@ namespace CSharpDesignPatternsPractice.Singleton
     {
 
         private static Logger instance;
-
-
-
         private Logger()
         {
         }
-
         public static Logger Instance
         {
             get
