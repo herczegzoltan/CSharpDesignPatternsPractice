@@ -46,11 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapter\DviMonitor.cs" />
-    <Compile Include="Adapter\VgaGraphicsCard.cs" />
-    <Compile Include="Adapter\DviStream.cs" />
-    <Compile Include="Adapter\VgaGraphicsCardAdapter.cs" />
-    <Compile Include="Adapter\VgaStream.cs" />
+    <Compile Include="AdapterPattern\ITarget.cs" />
+    <Compile Include="AdapterPattern\Adaptee.cs" />
+    <Compile Include="AdapterPattern\Adapter.cs" />
+    <Compile Include="FacadePattern\SearchEngineFacade.cs" />
+    <Compile Include="FacadePattern\SearchEngineMechanisms\DataIndexers.cs" />
+    <Compile Include="FacadePattern\SearchEngineMechanisms\GeneratingSnippetsMechanism.cs" />
+    <Compile Include="FacadePattern\SearchEngineMechanisms\PresentingResultsMechanism.cs" />
+    <Compile Include="FacadePattern\SearchEngineMechanisms\RetrievingDataMechanism.cs" />
     <Compile Include="Factory\Add.cs" />
     <Compile Include="Factory\CalculateFactory.cs" />
     <Compile Include="Factory\Divide.cs" />

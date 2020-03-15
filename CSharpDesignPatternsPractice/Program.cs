@@ -1,4 +1,5 @@
-﻿using CSharpDesignPatternsPractice.Adapter;
+﻿using CSharpDesignPatternsPractice.AdapterPattern;
+using CSharpDesignPatternsPractice.FacadePattern;
 using CSharpDesignPatternsPractice.Singleton;
 using CSharpDesignPatternsPractice.TemplateMethod;
 using System;
@@ -13,6 +14,7 @@ namespace CSharpDesignPatternsPractice.Factory
     {
         static void Main()
         {
+            Console.WriteLine("Factory");
             //------------------------------Factory Pattern
             Console.WriteLine("Enter Add, subtract or divide");
 
@@ -20,6 +22,7 @@ namespace CSharpDesignPatternsPractice.Factory
             ICalculate obj = factory.GetCalculation(Console.ReadLine());
             obj.Calculate(10, 10);
 
+            Console.WriteLine("Singleton");
             //------------------------------Singleton
             Logger ob1 = Logger.Instance;
 
@@ -27,6 +30,7 @@ namespace CSharpDesignPatternsPractice.Factory
             Console.WriteLine(ob1.GetHashCode());
             Console.WriteLine(ob2.GetHashCode());
 
+            Console.WriteLine("TemplateMethod");
             //------------------------------TemplateMethod
             ExcelFile objExcel = new ExcelFile();
             objExcel.ReadProcessAndSave();
@@ -34,13 +38,19 @@ namespace CSharpDesignPatternsPractice.Factory
             TextFile objText= new TextFile();
             objText.ReadProcessAndSave();
 
+            Console.WriteLine("Adapter");
             //------------------------------Adapter
-            Console.WriteLine("Setting input for DVI monitor!");
-            VgaGraphicsCard vgaGraphicsCard = new VgaGraphicsCard();
-            DviMonitor dviMonitor = new DviMonitor();
-            VgaGraphicsCardAdapter vgaGraphicsCardAdapter = new VgaGraphicsCardAdapter(vgaGraphicsCard);
-            dviMonitor.SetInput(vgaGraphicsCardAdapter.GetDviStream());
+            Adaptee adaptee = new Adaptee();
+            ITarget target = new Adapter(adaptee);
 
+            target.GetRequest();
+
+
+            Console.WriteLine("Facade");
+            //------------------------------Facade
+            var searchEngineFacade = new SearchEngineFacade();
+            var searchingResults = searchEngineFacade.GetSearchResults("My query");
+            Console.WriteLine(searchingResults);
         }
     }
 }
