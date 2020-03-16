@@ -1,12 +1,14 @@
 ﻿using CSharpDesignPatternsPractice.AdapterPattern;
 using CSharpDesignPatternsPractice.FacadePattern;
 using CSharpDesignPatternsPractice.Singleton;
+using CSharpDesignPatternsPractice.StrategyPattern;
 using CSharpDesignPatternsPractice.TemplateMethod;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CSharpDesignPatternsPractice.StrategyPattern.StrategyContext;
 
 namespace CSharpDesignPatternsPractice.Factory
 {
@@ -51,6 +53,18 @@ namespace CSharpDesignPatternsPractice.Factory
             var searchEngineFacade = new SearchEngineFacade();
             var searchingResults = searchEngineFacade.GetSearchResults("My query");
             Console.WriteLine(searchingResults);
+
+            Console.WriteLine("StrategyPattern");
+            //------------------------------Strategy
+
+            StrategyContext context;
+
+            context = new StrategyContext(new ConcreteStrategyA());
+            context.ContextInterface();
+            context = new StrategyContext(new ConcreteStrategyB());
+            context.ContextInterface();
+            context = new StrategyContext(new ConcreteStrategyC());
+            context.ContextInterface();
         }
     }
 }

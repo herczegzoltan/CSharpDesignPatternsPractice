@@ -59,6 +59,11 @@
     <Compile Include="Factory\Divide.cs" />
     <Compile Include="Factory\ICalculate.cs" />
     <Compile Include="Factory\Subtract.cs" />
+    <Compile Include="StrategyPattern\ConcreteStrategyA.cs" />
+    <Compile Include="StrategyPattern\ConcreteStrategyB.cs" />
+    <Compile Include="StrategyPattern\ConcreteStrategyC.cs" />
+    <Compile Include="StrategyPattern\StrategyContext.cs" />
+    <Compile Include="StrategyPattern\IStrategy.cs" />
     <Compile Include="TemplateMethod\DataProcessor.cs" />
     <Compile Include="TemplateMethod\ExcelFile.cs" />
     <Compile Include="Program.cs" />
